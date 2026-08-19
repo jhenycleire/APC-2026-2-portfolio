@@ -2,7 +2,7 @@
 // Autor: Jhenyfer Cleire
 // Disciplina: APC 2026.2
 
-loop    LDA contador    //Carrega o limite de rodadas 
+loop    LDA contador    //Carrega o limite de repetições 
         BRZ fim         // Aplica uma decisão, se o contador for 0, finaliza o programa
         SUB um          // Subtrai 1 do contador (15-1=14)
         STA contador    // Atualiza o contador na memória (14)
