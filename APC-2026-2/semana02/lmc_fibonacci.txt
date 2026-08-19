@@ -1,0 +1,25 @@
+// Programa: Sequência de Fibonacci (15 termos)
+// Autor: Jhenyfer Cleire
+// Disciplina: APC 2026.2
+
+loop    LDA contador    //Carrega o limite de rodadas 
+        BRZ fim         // Aplica uma decisão, se o contador for 0, finaliza o programa
+        SUB um          // Subtrai 1 do contador (15-1=14)
+        STA contador    // Atualiza o contador na memória (14)
+        LDA termo1      // Carrega o termo1 atual da sequência (atribuído como 0)
+        OUT             // Aplica a saída exibindo o termo na tela
+        ADD termo2      // Soma o termo1  + o termo2 (0+1=1)
+        STA proximo     // Salva o resultado na variável temporária
+        LDA termo2      // Inicia a atualização das variáveis 
+        STA termo1      // O termo1 (0) recebe o valor do termo2 (1) 
+        LDA proximo     // Pega o resultado da soma 
+        STA termo2      // termo2 recebe o resultado da soma (1) 
+        BRA loop        // Retorna ao início do ciclo
+
+fim     HLT             // Encerra o programa
+termo1  DAT 0           // Valor inicial do 1° termo
+termo2  DAT 1           // Valor incial do 2° termo
+proximo DAT 0           // Variável auxiliar (rascunho)
+contador DAT 15         // Limite de repetições
+um      DAT 1           // Constante para subtração
+    
