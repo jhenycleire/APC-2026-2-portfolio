@@ -26,10 +26,10 @@ um      DAT 1           // Constante para subtração
 
 // código sem comentários
 
-loop    LDA contador    
+loop    LDA contador
         BRZ fim        
-        SUB um          
-        STA contador    
+        SUB um      
+        STA contador 
         LDA termo1      
         OUT             
         ADD termo2      
