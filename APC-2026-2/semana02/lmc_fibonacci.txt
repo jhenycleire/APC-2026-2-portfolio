@@ -22,4 +22,22 @@ termo2  DAT 1           // Valor incial do 2° termo
 proximo DAT 0           // Variável auxiliar (rascunho)
 contador DAT 15         // Limite de repetições
 um      DAT 1           // Constante para subtração
-    
+
+
+// código sem comentários
+
+loop    LDA contador    
+        BRZ fim         
+        SUB um          
+        STA contador    
+        LDA termo1      
+        OUT             
+        ADD termo2      
+        STA proximo     
+        STA termo1      
+        BRA loop        
+
+fim     HLT             
+termo1  DAT 0           
+proximo DAT 0           
+contador DAT 15         
