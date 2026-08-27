@@ -19,7 +19,8 @@ Abaixo estão exemplos de como o programa se comporta diante de diferentes entra
 ### 2. Fluxograma do Algoritmo
 O fluxograma abaixo detalha a bifurcação da lógica: o caminho contínuo de soma e salvamento e a rota de desvio ativada pela detecção do zero.
 
-![Fluxograma do Somador](\APC-2026-2\semana03\Nivel 1 - Laços com sentinela\Problema 01\fluxograma_Problema01.drawio.png)
+<img width="605" height="674" alt="fluxograma_Problema01 drawio" src="https://github.com/user-attachments/assets/fa4643fb-646b-4f67-91ab-e883bd8facd2" />
+
 
 ---
 
