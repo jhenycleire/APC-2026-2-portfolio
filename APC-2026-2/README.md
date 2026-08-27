@@ -1,6 +1,6 @@
 # Apresentação Pessoal - Reflexão de Progresso 
 
-Meu nome é Jhenyfer Cleire e essa é a primeira vez que realizo a disciplina de Algoritmos e Programação de Computadores (APC). 
+Jhenyfer Cleire Melo dos Santos - 222020014
 
 ## Sobre mim ✨
 Sou estudante de Saúde Coletiva na UnB, no campus Ceilândia. Meu primeiro contato com programação foi quando participei de um grande projeto de desenvolvimento de uma Cartografia Social Afetiva com a Rede Social Local de Ceilândia/Sol Nascente. Foram três meses desenvolvendo a cartografia para conseguir finalizar até a data do evento de lançamento e, durante o tempo em que estive no laboratório, os meus colegas de equipe que estavam no backend conversavam muito sobre os termos, e eu não conseguia entender do que se tratava. Estar em um ambiente no qual não entendia do que estavam falando me incomodou, e decidi aprender sobre o assunto — por interesse e curiosidade!
