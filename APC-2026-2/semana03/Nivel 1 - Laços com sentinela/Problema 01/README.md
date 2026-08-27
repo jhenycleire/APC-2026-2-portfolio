@@ -1,5 +1,5 @@
 # LMC: Estrutura de Repetição (Somar até Zero)
----
+
 
 **Objetivo:** Construir um programa em linguagem Assembly capaz de somar continuamente os números digitados pelo usuário. O ciclo de repetição é encerrado quando o valor `0` é inserido, acionando a condição de parada para exibir na tela a soma total de todos os valores anteriores.
 
