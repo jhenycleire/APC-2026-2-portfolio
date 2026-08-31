@@ -1,0 +1,50 @@
+// Programa: Encontrar o maior valor digitado até o usuário inserir -1
+// Autor: Jhenyfer Cleire 
+// Disciplina: APC_2026.2
+
+loop    INP          // O número entra na mesa de trabalho (Acumulador)
+        STA atual    // GUARDA o número puro na gaveta 'atual' antes de qualquer conta
+        
+        ADD soma     // Puxa o '1' da RAM e soma na mesa para testar se é -1
+        BRZ fim      // Se a conta deu zero (era -1), desvia para o fim do programa
+        
+        LDA atual    // O teste passou. Tira a conta da mesa e puxa o número puro de volta
+        SUB maior    // Subtrai o recorde atual (atual - maior) para comparar
+        BRP troca    // Se o resultado for positivo ou zero, bateu o recorde! Desvia para 'troca'
+        BRA loop     // Se deu negativo, não bateu o recorde. Volta para ler o próximo
+        
+troca   LDA atual    // Puxa o número puro (que acabou de bater o recorde) para a mesa
+        STA maior    // Salva esse número na gaveta 'maior', atualizando o recorde
+        BRA loop     // Volta para ler o próximo número
+        
+fim     LDA maior    // O usuário digitou -1. Puxa o recordista final da gaveta
+        OUT          // Exibe o maior número na tela
+        HLT          // Encerra a máquina
+        
+soma    DAT 1        // Gaveta com a constante para testar o -1
+atual   DAT 0        // Gaveta temporária para proteger o número recém-digitado
+maior   DAT 0        // Gaveta que guarda o recorde (o maior número encontrado)
+
+// Código sem comentário
+
+loop    INP
+        STA atual
+        ADD soma
+        BRZ fim
+        
+        LDA atual
+        SUB maior
+        BRP troca
+        BRA loop
+        
+troca   LDA atual
+        STA maior
+        BRA loop
+        
+fim     LDA maior
+        OUT
+        HLT
+        
+soma    DAT 1
+atual   DAT 0
+maior   DAT 0

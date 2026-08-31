@@ -1,0 +1,39 @@
+// Programa: Contador de números digitados até o usuário inserir -1
+// Autor: Jhenyfer Cleire 
+// Disciplina: APC_2026.2
+
+loop    INP          // O número digitado entra direto na "mesa de trabalho" (Acumulador).
+        ADD soma     // Puxa o '1' da RAM e soma com o número da mesa para testar se é -1.
+        BRZ fim      // Decisão: Se a conta na mesa deu zero (era -1), desvia para o 'fim'.
+
+        LDA count    // O teste passou. Tira o número inútil da mesa e puxa o contador da RAM.
+        ADD soma     // Puxa o '1' da RAM e soma com o contador na mesa (Contador + 1).
+        STA count    // Pega o contador atualizado da mesa e guarda de volta na gaveta da RAM.
+        BRA loop     // Retorna ao início para receber o próximo número.
+
+fim     LDA count    // O desvio chegou aqui. Puxa o total final da gaveta da RAM para a mesa.
+        OUT          // Exibe na tela o número que está na mesa (o total contado).
+        HLT          // Encerra a execução da CPU.
+
+soma    DAT 1        // Gaveta na RAM que guarda a constante para testes e contagens.
+count   DAT 0        // Gaveta na RAM que guarda o registro da contagem (inicia em zero).
+
+
+
+// Código sem comentário
+
+loop    INP
+	ADD soma
+	BRZ fim
+
+	LDA count
+	ADD soma
+	STA count
+	BRA loop
+
+fim	LDA count
+	OUT
+	HLT
+
+soma 	DAT 1
+count	DAT 0
