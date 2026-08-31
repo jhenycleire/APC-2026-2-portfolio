@@ -43,3 +43,18 @@ fim     LDA soma     // Carrega o valor total da soma no accumulator
         HLT          // Encerra o programa
         
 soma    DAT 0        // A variável soma se inicia igual a zero
+
+
+// Código sem comentários
+
+loop    INP          
+        BRZ fim      
+        ADD soma     
+        STA soma     
+        BRA loop     
+
+fim     LDA soma     
+        OUT         
+        HLT          
+        
+soma    DAT 0       
